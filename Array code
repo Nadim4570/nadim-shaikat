@@ -223,3 +223,60 @@ int modifyElement(int item){
      printArray(A,SIZE);
 
 }
+
+ex 11 
+
+
+#include <stdio.h>
+
+int main()
+{
+   int n,smallest=0,i;
+   printf("enter the size of the array:");
+   scanf("%d",&n);
+   int a[n];
+   for(i=0;i<n;i++)
+   {
+       a[i]=i;
+   }
+   for (i=0;i<n;i++)
+   {
+       if(a[i]<a[smallest])
+   {
+       smallest=i;
+   }
+   }
+printf("the minimum value is %d",a[smallest]);
+}
+
+
+
+#Exam que num :2
+
+
+#include<stdio.h>
+void main()
+{
+    int n,i,reverse,swap;
+
+    printf("input the number of elements to store in the array:");
+    scanf("%d",&n);
+
+    int a[n];
+    printf("enter %d number of elements in the array:\n ");
+    for(i=0;i<n;i++)
+    {
+        printf("elements-%d",i);
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n/2;i++)
+    {
+        swap=a[i];
+        a[i]=a[n-1-i];
+        a[n-1-i]=swap;
+
+    }
+     printf("the values store into the array in reverse are:\n");
+     for(i=0;i<n;i++)
+ printf("%d",a[i]);
+}
